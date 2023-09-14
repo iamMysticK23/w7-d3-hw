@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/main.js" defer></script>
+<title>Week 7 Day 3 Homework - F1 Racer API</title>
+</head>
+
+<body>
+<h1 class="text-center text-uppercase">F1 Racer API Data</h1>
+
+<!-- HTML Elements -->
+<div class="container mt-5">
+
+    <!-- created a form for user input of season and round-->
+    <form id="racer-form" class="mb-3 p-5">
+        <div class="mb-4 me-3 mt-5 d-flex justify-content-left">
+            <label for="season" class="form-label text-uppercase me-3">Season:</label>
+            <input type="number" id="season" class="form-control" style="width:125px" required>
+        </div>
+        <div class="mb-4 me-3 d-flex justify-content-left">
+            <label for="round" class="form-label text-uppercase me-3">Round:</label>
+            <input type="number" id="round" class="form-control" style="width:125px" required>
+        </div>
+
+        <!-- had to figure out a way to not get errors with the onclick. i kept getting a 404 error before adding these values in the onclick-->
+        <button type="submit" class="btn btn-danger" onclick="loadF1Data(document.querySelector('#season').value, document.querySelector('#round').value)">Get Data</button>
+  
+    </form>
+
+    <!-- table column headers-->
+    <table id="racer-info-header" class="table table-bordered bg-dark text-center text-white">
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Name</th>
+                <th>Nationality</th>
+                <th>Sponsor</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody id="racer-info-table" class="bg-secondary">
+    <!-- Data from the F1 Racer API appears below -->
+
+
+        </tbody>
+    </table>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

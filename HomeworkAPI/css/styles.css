@@ -1,0 +1,27 @@
+/* css to make this look nicer */
+
+body {
+
+    background-image: url("https://wallpapers.com/images/hd/cool-f1-60khof1nlpcww408.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    height: 1000px;
+    background-color:black;
+   
+    
+
+}
+
+.container {
+    color: black;
+}
+
+.text-center {
+    color: red;
+}
+
+.form-label {
+    color:rgb(222, 237, 146);
+    font-weight: bold;
+}
+
